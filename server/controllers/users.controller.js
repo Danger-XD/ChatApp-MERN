@@ -1,20 +1,6 @@
-import {
-  loginService,
-  logoutService,
-  registerService,
-} from "../services/users.service.js";
+import { getAllUsersService } from "../services/users.service.js";
 
-export const register = async (req, res) => {
-  let result = await registerService(req, res);
-  res.status(200).json(result);
-};
-
-export const login = async (req, res) => {
-  let result = await loginService(req, res);
-  res.status(200).json(result);
-};
-
-export const logout = async (req, res) => {
-  let result = await logoutService(req, res);
+export const getAllUsers = async (req, res) => {
+  let result = await getAllUsersService(req, res);
   res.status(200).json(result);
 };
